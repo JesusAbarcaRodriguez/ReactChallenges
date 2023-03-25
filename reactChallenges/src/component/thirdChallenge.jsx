@@ -1,22 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 function ButtonAndDiv() {
-    const [showDiv, setShowDiv] = useState(true);
-    const [buttonText, setButtonText] = useState('Hide Div Element');
-    const handleClick = () => {
-    setShowDiv(false);
-    setButtonText('Show Div Element');
-}
+  const [isDivVisible, setIsDivVisible] = useState(true);
+  const [buttonText, setButtonText] = useState("Hide Div Element");
 
-return (
+  const handleClick = () => {
+    setIsDivVisible(!isDivVisible);
+    setButtonText(isDivVisible ? "Show Div Element" : "Hide Div Element");
+  };
+
+  return (
     <>
-    {showDiv && (
+      {
         <div>
-            <button onClick={handleClick}>{buttonText}</button>
-            <div>I´m here!. Att:"The Div"</div>
+          <button onClick={handleClick} class="bg-red-400">
+            {buttonText}
+          </button>
+          {isDivVisible && <div>I´m here!. Att:"The Div"</div>}
         </div>
-    )}
+      }
     </>
-);
+  );
 }
 export default ButtonAndDiv;

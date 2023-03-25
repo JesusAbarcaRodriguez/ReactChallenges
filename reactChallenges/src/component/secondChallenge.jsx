@@ -1,15 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 
-function AnimalList() {
-    return (
-    <ul>
-        {props.animals.map(animal => (
-        <li key={animal.id}>{animal.name}</li>
+function SecondChallenge(props) {
+  return (
+    <div>
+      <h1>My Animal List:</h1>
+      <ul>
+        {props.animals.map((animal) => (
+          <li key={animal.id}>{animal.name}</li>
         ))}
-    </ul>
-    );
+      </ul>
+    </div>
+  );
 }
 
-// ReactDOM.render(<AnimalList animals={animals} />, document.getElementById("root"));
-
-export default AnimalList;
+export default SecondChallenge;
