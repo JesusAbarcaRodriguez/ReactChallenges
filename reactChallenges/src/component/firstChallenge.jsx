@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function firstChallenge( {name}) {
+function firstChallenge() {
   return <h1>NUESTROS APELLIDOS</h1>;
 }
 

@@ -1,5 +1,6 @@
+import React, { useState } from "react";
 
-function AnimalList(props) {
+function AnimalList() {
     return (
     <ul>
         {props.animals.map(animal => (
@@ -9,12 +10,6 @@ function AnimalList(props) {
     );
 }
 
-const animals = [
-    {id: 1 , name: "Tiger" },
-    {id: 2 , name: "Lion"},
-    {id: 3 , name: "Python"}
-];
-
-ReactDOM.render(<AnimalList animals={animals} />, document.getElementById("root"));
+// ReactDOM.render(<AnimalList animals={animals} />, document.getElementById("root"));
 
 export default AnimalList;
