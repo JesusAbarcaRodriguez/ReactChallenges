@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import First from "./component/firstChallenge";
 import Second from "./component/secondChallenge";
 import Third from "./component/thirdChallenge";
-import Fourt from "./component/fourthChallenge"
+import Fourt from "./component/fourthChallenge";
+import Five from "./component/fifthChallenge";
 function App() {
   const [animals, setAnimals] = useState([
     { id: 1, name: "Tiger" },
@@ -25,6 +26,8 @@ function App() {
     currentComponent = <Third />;
   } else if (currentPage === "fourt") {
     currentComponent = <Fourt />;
+  } else if (currentPage === "five") {
+    currentComponent = <Five />;
   }
 
   return (
@@ -42,8 +45,11 @@ function App() {
         <button class="bg-red-100 mx-3" onClick={() => handleClick("fourt")}>
           Ir a la cuarta página
         </button>
+        <button class="bg-red-100 mx-3" onClick={() => handleClick("five")}>
+          Ir a la quinta página
+        </button>
       </div>
-      <div class="align-middle"> {currentComponent}</div>
+      <div class="flex justify-center mt-4"> {currentComponent}</div>
     </div>
   );
 }
