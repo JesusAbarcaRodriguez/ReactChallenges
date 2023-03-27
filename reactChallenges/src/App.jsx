@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import First from "./component/firstChallenge";
 import Second from "./component/secondChallenge";
 import Third from "./component/thirdChallenge";
-import Fourt from "./component/fourthChallenge"
+import Fourt from "./component/fourthChallenge";
+import SixthChallenge from './component/sixthChallenge';
 function App() {
   const [animals, setAnimals] = useState([
     { id: 1, name: "Tiger" },
@@ -28,7 +29,7 @@ function App() {
   }
 
   return (
-    <div class="flex align-middle flex-col">
+   <div class="flex align-middle flex-col">
       <div class="flex justify-center flex-row">
         <button class="bg-red-100 mx-3" onClick={() => handleClick("first")}>
           Ir a la primera página
