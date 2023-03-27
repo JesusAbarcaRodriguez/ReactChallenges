@@ -3,8 +3,8 @@ import First from "./component/firstChallenge";
 import Second from "./component/secondChallenge";
 import Third from "./component/thirdChallenge";
 import Fourt from "./component/fourthChallenge";
-import SixthChallenge from './component/sixthChallenge';
 import Five from "./component/fifthChallenge";
+import Sixth from "./component/sixthChallenge";
 function App() {
   const [animals, setAnimals] = useState([
     { id: 1, name: "Tiger" },
@@ -29,29 +29,22 @@ function App() {
     currentComponent = <Fourt />;
   } else if (currentPage === "five") {
     currentComponent = <Five />;
+  } else if (currentPage === "six") {
+    currentComponent = <Sixth />;
   }
 
   return (
-   <div class="flex align-middle flex-col">
-      <div class="flex justify-center flex-row">
-        <button class="bg-red-100 mx-3" onClick={() => handleClick("first")}>
-          Ir a la primera página
-        </button>
-        <button class="bg-red-100 mx-3" onClick={() => handleClick("second")}>
-          Ir a la segunda página
-        </button>
-        <button class="bg-red-100 mx-3" onClick={() => handleClick("third")}>
-          Ir a la tercera página
-        </button>
-        <button class="bg-red-100 mx-3" onClick={() => handleClick("fourt")}>
-          Ir a la cuarta página
-        </button>
-        <button class="bg-red-100 mx-3" onClick={() => handleClick("five")}>
-          Ir a la quinta página
-        </button>
+    // <div>
+      <div class="flex justify-center flex-row mx-">
+        <button class="bg-blue-700 text-white px-4 py-2 rounded-md my-2 m" type="submit" onClick={() => handleClick("first")}>Ir a la primera página</button>
+        <button class="bg-blue-700 text-white px-4 py-2 rounded-md my-2 m" type="submit" onClick={() => handleClick("second")}>Ir a la segunda página</button>
+        <button class="bg-blue-700 text-white px-4 py-2 rounded-md my-2 m" type="submit" onClick={() => handleClick("third")}>Ir a la tercera página</button>
+        <button class="bg-blue-700 text-white px-4 py-2 rounded-md my-2 m" type="submit" onClick={() => handleClick("fourt")}>Ir a la cuarta página</button>
+        <button class="bg-blue-700 text-white px-4 py-2 rounded-md my-2 m" type="submit" onClick={() => handleClick("five")}>Ir a la quinta página</button>
+        <button class="bg-blue-700 text-white px-4 py-2 rounded-md my-2 m" type="submit" onClick={() => handleClick("five")}>Ir a la Sext página</button>
       </div>
-      <div class="flex justify-center mt-4"> {currentComponent}</div>
-    </div>
+      // <div class="flex justify-center mt-4"> {currentComponent}</div>
+      // </div>
   );
 }
 
