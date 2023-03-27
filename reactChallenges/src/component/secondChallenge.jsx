@@ -4,7 +4,7 @@ function SecondChallenge(props) {
   return (
     <div>
       <h1>My Animal List:</h1>
-      <ul>
+      <ul class="list-disc">
         {props.animals.map((animal) => (
           <li key={animal.id}>{animal.name}</li>
         ))}

@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import First from "./component/firstChallenge";
 import Second from "./component/secondChallenge";
 import Third from "./component/thirdChallenge";
-import Fourt from "./component/fourthChallenge";
+import Fourth from "./component/fourthChallenge";
 import Five from "./component/fifthChallenge";
 import Sixth from "./component/sixthChallenge";
+import Button from "./component/button";
 function App() {
   const [animals, setAnimals] = useState([
     { id: 1, name: "Tiger" },
@@ -25,26 +26,35 @@ function App() {
     currentComponent = <Second animals={animals} />;
   } else if (currentPage === "third") {
     currentComponent = <Third />;
-  } else if (currentPage === "fourt") {
-    currentComponent = <Fourt />;
+  } else if (currentPage === "fourth") {
+    currentComponent = <Fourth />;
   } else if (currentPage === "five") {
     currentComponent = <Five />;
   } else if (currentPage === "six") {
     currentComponent = <Sixth />;
   }
 
-  return (
-    // <div>
-      <div class="flex justify-center flex-row mx-">
-        <button class="bg-blue-700 text-white px-4 py-2 rounded-md my-2 m" type="submit" onClick={() => handleClick("first")}>Ir a la primera página</button>
-        <button class="bg-blue-700 text-white px-4 py-2 rounded-md my-2 m" type="submit" onClick={() => handleClick("second")}>Ir a la segunda página</button>
-        <button class="bg-blue-700 text-white px-4 py-2 rounded-md my-2 m" type="submit" onClick={() => handleClick("third")}>Ir a la tercera página</button>
-        <button class="bg-blue-700 text-white px-4 py-2 rounded-md my-2 m" type="submit" onClick={() => handleClick("fourt")}>Ir a la cuarta página</button>
-        <button class="bg-blue-700 text-white px-4 py-2 rounded-md my-2 m" type="submit" onClick={() => handleClick("five")}>Ir a la quinta página</button>
-        <button class="bg-blue-700 text-white px-4 py-2 rounded-md my-2 m" type="submit" onClick={() => handleClick("five")}>Ir a la Sext página</button>
+  const App = () => {
+    return (
+      <div>
+        <Button>Click me</Button>
+        <Button className="ml-2">Or click me</Button>
       </div>
-      // <div class="flex justify-center mt-4"> {currentComponent}</div>
-      // </div>
+    );
+  };
+
+  return (
+    <div class="h-full w-full">
+      <div class="flex justify-center flex-row px-8 mx-7 ">
+        <Button onClick={() => handleClick("first")} >Ir al primer reto</Button>
+        <Button onClick={() => handleClick("second")}>Ir al segundo reto</Button>
+        <Button onClick={() => handleClick("third")}>Ir al tercer reto</Button>
+        <Button onClick={() => handleClick("fourth")}>Ir al cuarto reto</Button>
+        <Button onClick={() => handleClick("five")}>Ir al quinto reto</Button>
+        <Button onClick={() => handleClick("six")}>Ir al sexto reto</Button>
+      </div>
+      <div class="flex justify-center mt-4"> {currentComponent}</div>
+   </div>
   );
 }
 

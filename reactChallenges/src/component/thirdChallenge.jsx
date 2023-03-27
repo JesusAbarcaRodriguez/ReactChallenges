@@ -13,7 +13,7 @@ function ButtonAndDiv() {
     <>
       {
         <div>
-          <button onClick={handleClick} class="bg-red-400">
+          <button onClick={handleClick} class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-8">
             {buttonText}
           </button>
           {isDivVisible && <div>I´m here!. Att:"The Div"</div>}

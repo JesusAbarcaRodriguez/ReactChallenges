@@ -1,17 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="min-h-full">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React</title>
   </head>
-  <body class="rounded-md flex flex-col items-center justify-center align-items-center bg-gradient-to-b from-white to-gray-500 no-repeat">
-    <header class="flex flex-col justify-center">REACT CHALLENGES<header>
-    <div class="justify-center"  id="root"></div>
+  <body class="bg-gradient-to-b from-white to-gray-500 bg-no-repeat min-h-full">
+    <div class="flex justify-center mt-2">
+      <div class="flex flex-row align-middle">
+        <header class=" align-center w-full font-serif mt-1 ">REACT CHALLENGES‎‎‎‎</header>
+        <img src="./src/assets/react.svg" className="logo react" alt="React logo" />
+      </div>
+    </div>
+    <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <footer class="w-full bg-gradient-to-b from-gray-500 to-white fixed bottom-0 flex justify-center">
+      <span> &copy;Anders Flores && Alvaro Chaves && Francisco Amador && Jesus Abarca</span>
+    </footer>
   </body>
-  <footer class="fixed bottom-0 flex">
-    <span> &copy;Anders Flores && Alvaro Chaves && Francisco Amador && Jesus Abarca</span>
-  </footer>
 </html>
